@@ -87,11 +87,57 @@ h2 {
   transform: scale(1.05);
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
 }
+h3 {
+  text-align: center;
+  margin-top: 50px;
+  font-weight: 500;
+  font-size: 40px;
+  padding: 5px;
+}
+
+.galleryContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 40px;
+  padding: 0px;
+}
+
+.gallery {
+  flex: 0 0 auto; /* Prevents shrinking */
+  width: 200px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: 0.3s;
+  text-align: center;
+  scroll-snap-align: center;
+}
+
+.gallery:hover {
+  border: 2px solid #ffcc00;
+  transform: scale(1.05);
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.galleryContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.desc {
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+}
 
 /* 🔹 Responsive Design */
 @media (max-width: 768px) {
   h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   h2 {
