@@ -1,0 +1,115 @@
+/* Shop Page Styling */
+.shop-page {
+  padding: 130px;
+  background-color: #f5f5f5;
+}
+
+.card {
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  /* Set the card width to be responsive */
+  width: 100%;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img-top {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-price {
+  font-size: 16px;
+  color: #2c3e50;
+  margin: 10px 0;
+}
+
+.btn {
+  background-color: #2980b9;
+  color: white;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #3498db;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  /* Adjust padding for medium devices like tablets */
+  .shop-page {
+    padding: 80px;
+  }
+
+  .card {
+    max-width: 250px; /* Smaller card width for medium screens */
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+
+  .card-price {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjust padding for small devices like phones */
+  .shop-page {
+    padding: 50px 10px;
+  }
+
+  .card {
+    width: 100%; /* Full-width cards for small screens */
+    max-width: 100%;
+  }
+
+  .card-img-top {
+    max-height: 150px; /* Adjust image size */
+  }
+
+  .card-title {
+    font-size: 14px;
+  }
+
+  .card-price {
+    font-size: 12px;
+  }
+
+  .btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for very small screens */
+  .card-title {
+    font-size: 12px;
+  }
+
+  .card-price {
+    font-size: 12px;
+  }
+
+  .btn {
+    padding: 8px;
+    font-size: 12px;
+  }
+}

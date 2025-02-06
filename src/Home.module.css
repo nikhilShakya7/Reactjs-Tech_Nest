@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background-color: whitesmoke;
   background: url("/bg.jpg") no-repeat center center/cover;
   text-align: center;
   padding: 20px;
@@ -107,15 +108,15 @@ h3 {
 .gallery {
   flex: 0 0 auto; /* Prevents shrinking */
   width: 200px;
-  border: 2px solid #ccc;
-  border-radius: 5px;
+  background-color: whitesmoke;
+  border: 2px solid whitesmoke;
   transition: 0.3s;
   text-align: center;
   scroll-snap-align: center;
 }
 
 .gallery:hover {
-  border: 2px solid #ffcc00;
+  box-shadow: #ffffff;
   transform: scale(1.05);
 }
 

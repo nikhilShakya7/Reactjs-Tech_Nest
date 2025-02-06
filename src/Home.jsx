@@ -34,7 +34,6 @@ const Home = () => {
             { src: "./laptop.webp", alt: "Laptops" },
             { src: "./iphone.webp", alt: "Mobiles" },
             { src: "./tablets.webp", alt: "Tablets" },
-            { src: "/img_mountains.jpg", alt: "Mountains" },
           ].map((image, index) => (
             <div key={index} className={styles.gallery}>
               <a href={image.src} target="_blank" rel="noopener noreferrer">
