@@ -32,8 +32,8 @@ const Home = () => {
         <div className={styles.galleryContainer}>
           {[
             { src: "./laptop.webp", alt: "Laptops" },
-            { src: "./mobile.webp", alt: "Mobiles" },
-            { src: "./tablet.jpg", alt: "Tablets" },
+            { src: "./iphone.webp", alt: "Mobiles" },
+            { src: "./tablets.webp", alt: "Tablets" },
             { src: "/img_mountains.jpg", alt: "Mountains" },
           ].map((image, index) => (
             <div key={index} className={styles.gallery}>
