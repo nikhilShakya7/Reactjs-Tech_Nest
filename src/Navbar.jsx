@@ -1,8 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
+import { items } from "./Data";
 
-const Navbar = () => {
+const Navbar = ({ setData }) => {
+  const filterByCat = (category) => {
+    const element = items.filter((product) => product.category === category);
+    console.log("Filtering by category:", element);
+
+    setData(element);
+  };
+
   return (
     <>
       <nav className={`navbar navbar-expand-lg navbar-dark ${styles.navbar}`}>
@@ -12,7 +20,7 @@ const Navbar = () => {
           </Link>
 
           <input
-            class="form"
+            className="form"
             type="search"
             placeholder="Search"
             aria-label="Search"
@@ -22,18 +30,34 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
+
       <nav className={`navbar navbar-expand-lg ${styles.categoryNav}`}>
         <div className="container">
           <div className="navbar-nav">
-            <Link className="nav-item nav-link" to="/products/mobile">
-              Mobile
-            </Link>
-            <Link className="nav-item nav-link" to="/products/laptops">
+            <div
+              onClick={() => setData(items)}
+              className={`${styles.categoryItem}`}
+            >
+              All
+            </div>
+            <div
+              onClick={() => filterByCat("mobiles")}
+              className={`${styles.categoryItem}`}
+            >
+              Mobiles
+            </div>
+            <div
+              onClick={() => filterByCat("laptops")}
+              className={styles.categoryItem}
+            >
               Laptops
-            </Link>
-            <Link className="nav-item nav-link" to="/products/tablets">
+            </div>
+            <div
+              onClick={() => filterByCat("tablets")}
+              className={styles.categoryItem}
+            >
               Tablets
-            </Link>
+            </div>
           </div>
         </div>
       </nav>

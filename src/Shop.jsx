@@ -1,14 +1,14 @@
 import React from "react";
-import { items } from "./Data"; // Ensure this file exports the above array
+import { items } from "./Data";
 import "./Shop.css";
 
-const Shop = () => {
+const Shop = ({ items }) => {
   return (
     <div className="shop-page">
       <div className="row">
         {items.map((shopItem) => (
           <div key={shopItem.id} className="col-md-4">
-            <div className="card" style={{ width: "18rem" }}>
+            <div className="card" style={{ width: "20rem" }}>
               <img
                 className="card-img-top"
                 src={shopItem.imgSrc}
@@ -17,15 +17,13 @@ const Shop = () => {
               <div className="card-body">
                 <h5 className="card-title">{shopItem.title}</h5>
                 <p className="card-text">{shopItem.description}</p>
-                <p className="card-price">₹{shopItem.price}</p>
-                <a
-                  href={shopItem.amazonLink}
-                  className="btn btn-primary"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <p className="card-price">Rs. {shopItem.price}</p>
+                <a href="https://www.daraz.com.np/#?" className="btn btn-info">
                   Buy Now
                 </a>
+                <button type="button" className="btn btn-warning mx-3">
+                  Add to cart
+                </button>
               </div>
             </div>
           </div>
