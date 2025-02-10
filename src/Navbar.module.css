@@ -10,7 +10,7 @@
   z-index: 1000;
 }
 input {
-  width: 1000px;
+  width: 100%;
   padding: 5px;
   border: 2px solid;
   border-radius: 5px;
