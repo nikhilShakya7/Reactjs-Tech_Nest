@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import { items } from "./Data";
 
-const Navbar = ({ setData }) => {
+const Navbar = ({ setData, cart }) => {
   const navigate = useNavigate();
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState(""); // State to track active category
@@ -40,6 +40,12 @@ const Navbar = ({ setData }) => {
               <button type="submit">Search🔍</button>
             </div>
           </form>
+          <Link to={"/cart"} className="cart">
+            {" "}
+            <button type="button" class="btn btn-primary">
+              🛒 <span class="badge badge-light">{cart.length}</span>
+            </button>
+          </Link>
         </div>
       </nav>
 
